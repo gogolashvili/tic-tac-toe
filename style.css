@@ -39,6 +39,9 @@ body {
   flex-direction: column;
   align-items: center;
 }
+#board {
+  display: none;
+}
 .home-header {
   display: flex;
   align-items: center;
@@ -100,17 +103,22 @@ body {
 
 .new-game-btn {
   width: 327px;
-  padding: 14px 76px 22px 76px;
+  padding: 14px 0px 22px 0px;
   box-shadow: inset 0px -8px 0px #cc8b13;
   border-radius: 15px;
   border: none;
   cursor: pointer;
+  font-family: "Outfit", sans-serif;
 }
 .cpu-btn {
   background-color: var(--orange);
   margin-top: 32px;
-  font-family: "Outfit", sans-serif;
 }
 .btn-text {
   color: var(--darkBg);
+}
+.player-btn {
+  background-color: var(--sky);
+  margin-top: 16px;
+  box-shadow: inset 0px -8px 0px #118c87;
 }
