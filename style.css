@@ -100,7 +100,7 @@ body {
 
 .new-game-btn {
   width: 327px;
-  padding: 14px 70px 22px 70px;
+  padding: 14px 76px 22px 76px;
   box-shadow: inset 0px -8px 0px #cc8b13;
   border-radius: 15px;
   border: none;
@@ -109,7 +109,8 @@ body {
 .cpu-btn {
   background-color: var(--orange);
   margin-top: 32px;
+  font-family: "Outfit", sans-serif;
 }
-.cpu-btn-text {
+.btn-text {
   color: var(--darkBg);
 }
