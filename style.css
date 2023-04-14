@@ -73,6 +73,7 @@ body {
   border-radius: 10px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .x-icon,
 .o-icon {
@@ -95,4 +96,20 @@ body {
   opacity: 0.5;
   margin-top: 17px;
   mix-blend-mode: normal;
+}
+
+.new-game-btn {
+  width: 327px;
+  padding: 14px 70px 22px 70px;
+  box-shadow: inset 0px -8px 0px #cc8b13;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+.cpu-btn {
+  background-color: var(--orange);
+  margin-top: 32px;
+}
+.cpu-btn-text {
+  color: var(--darkBg);
 }
