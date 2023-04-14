@@ -85,3 +85,14 @@ body {
 .active svg path {
   fill: var(--darkBg);
 }
+
+.warning {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17.64px;
+  letter-spacing: 0.88px;
+  color: var(--light);
+  opacity: 0.5;
+  margin-top: 17px;
+  mix-blend-mode: normal;
+}
