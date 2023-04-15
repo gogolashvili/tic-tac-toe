@@ -86,6 +86,7 @@ const createClickedFunctions = () => {
         xArray.push(index);
         const win = checkXwin();
         if (win) {
+          onWinX();
           return;
         }
         turn = "o";
