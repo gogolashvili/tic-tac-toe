@@ -18,6 +18,9 @@ let turn = "x";
 let freeButtons = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 let xArray = [];
 let oArray = [];
+let xScore = 0;
+let oScore = 0;
+let tieScore = 0;
 let winnerCombinations = [
   [0, 1, 2],
   [3, 4, 5],
@@ -47,11 +50,32 @@ const checkXwin = () => {
   );
 };
 
+const checkOwin = () => {
+  return winnerCombinations.find((combination) =>
+    combination.every((button) => oArray.includes(button))
+  );
+};
+
 const onWinX = () => {
   modal.style.display = "flex";
   modalIcon.src = "./photos/x.svg";
   modalResultText.style.color = "#31C3BD";
+  xScore++;
+  xScoreElement.textContent = xScore;
   if (player1 === "x") {
+    modalInfoText.textContent = "YOU WON!";
+  } else {
+    modalInfoText.textContent = "OH NO, YOU LOST…";
+  }
+};
+
+const onWinO = () => {
+  modal.style.display = "flex";
+  modalIcon.src = "./photos/o.svg";
+  modalResultText.style.color = "#F2B137";
+  oScore++;
+  oScoreElement.textContent = oScore;
+  if (player1 !== "x") {
     modalInfoText.textContent = "YOU WON!";
   } else {
     modalInfoText.textContent = "OH NO, YOU LOST…";
@@ -97,6 +121,11 @@ const createClickedFunctions = () => {
         icon.src = "./photos/o.svg";
         event.target.append(icon);
         oArray.push(index);
+        const win = checkOwin();
+        if (win) {
+          onWinO();
+          return;
+        }
         turn = "x";
         turnInfoImage.src = "./photos/x-gray.png";
       }
