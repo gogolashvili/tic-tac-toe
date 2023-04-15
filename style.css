@@ -176,7 +176,10 @@ body {
   height: 96px;
   box-shadow: inset 0px -8px 0px #10212a;
   border-radius: 10px;
-  background-color: var(--bg);
+  /* background-color: var(--bg); */
+  background-image: url("./photos/Untitled\ 2.jpg");
+  background-position: center;
+  background-size: cover;
 }
 .statistics {
   margin-top: 24px;
