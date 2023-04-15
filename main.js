@@ -47,6 +47,15 @@ const checkXwin = () => {
   );
 };
 
+const onWinX = () => {
+  modal.style.display = "flex";
+  if (player1 === "x") {
+    modalInfoText.textContent = "YOU WON!";
+  } else {
+    modalInfoText.textContent = "OH NO, YOU LOST…";
+  }
+};
+
 const onHoverEffect = () => {
   for (let index = 0; index < freeButtons.length; index++) {
     const playButtonIndex = freeButtons[index];
