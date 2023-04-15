@@ -189,4 +189,27 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
+  color: var(--darkBg);
+}
+.statistic-box:nth-child(1) {
+  background-color: var(--sky);
+}
+.statistic-box:nth-child(2) {
+  background-color: var(--light);
+}
+.statistic-box:nth-child(3) {
+  background-color: var(--orange);
+}
+.statistic-box h3 {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15.12px;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+}
+.statistic-box span {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25.2px;
+  letter-spacing: 1.25px;
 }
