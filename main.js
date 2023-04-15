@@ -4,6 +4,10 @@ const board = document.querySelector("#board");
 
 let player1 = "x";
 let mode = "cpu";
+let turn = "x";
+let freeButtons = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+let xArray = [];
+let oArray = [];
 
 const activateChoice = (icon) => {
   if (icon === "x") {
