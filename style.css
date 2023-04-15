@@ -126,7 +126,8 @@ body {
 #board {
   display: none;
 }
-.board-header {
+.board-header,
+.statistics {
   width: 328px;
   display: flex;
   justify-content: space-between;
@@ -176,4 +177,16 @@ body {
   box-shadow: inset 0px -8px 0px #10212a;
   border-radius: 10px;
   background-color: var(--bg);
+}
+.statistics {
+  margin-top: 24px;
+}
+.statistic-box {
+  width: 96px;
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
