@@ -1,4 +1,5 @@
 const choiceButtons = document.querySelectorAll(".btn-box");
+const playButtons = document.querySelectorAll(".play-btn");
 const home = document.querySelector("#home");
 const board = document.querySelector("#board");
 
@@ -31,9 +32,23 @@ const activateChoice = (icon) => {
   }
 };
 
+const onHoverEffect = () => {
+  for (let index = 0; index < freeButtons.length; index++) {
+    const playButtonIndex = freeButtons[index];
+    if (turn == "x") {
+      playButtons[playButtonIndex].classList.add("xHover");
+      playButtons[playButtonIndex].classList.remove("oHover");
+    } else {
+      playButtons[playButtonIndex].classList.add("oHover");
+      playButtons[playButtonIndex].classList.remove("xHover");
+    }
+  }
+};
+
 const startGame = (modeParam) => {
   home.style.display = "none";
   board.style.display = "flex";
   document.body.style.alignItems = "flex-start";
   mode = modeParam;
+  onHoverEffect();
 };
