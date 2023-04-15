@@ -2,6 +2,11 @@ const choiceButtons = document.querySelectorAll(".btn-box");
 const playButtons = document.querySelectorAll(".play-btn");
 const home = document.querySelector("#home");
 const board = document.querySelector("#board");
+const xScoreText = document.querySelector("#x-score-text");
+const oScoreText = document.querySelector("#o-score-text");
+const xScoreElement = document.querySelector("#x-score");
+const oScoreElement = document.querySelector("#o-score");
+const turnInfoImage = document.querySelector(".turn-box img");
 
 let player1 = "x";
 let mode = "cpu";
@@ -79,4 +84,21 @@ const startGame = (modeParam) => {
   mode = modeParam;
   onHoverEffect();
   createClickedFunctions();
+  if (modeParam === "player") {
+    if (player1 === "x") {
+      xScoreText.textContent = "X (P1)";
+      oScoreText.textContent = "O (P2)";
+    } else {
+      xScoreText.textContent = "X (P2)";
+      oScoreText.textContent = "O (P1)";
+    }
+  } else {
+    if (player1 === "x") {
+      xScoreText.textContent = "X (YOU)";
+      oScoreText.textContent = "O (CPU)";
+    } else {
+      xScoreText.textContent = "X (CPU)";
+      oScoreText.textContent = "O (YOU)";
+    }
+  }
 };
