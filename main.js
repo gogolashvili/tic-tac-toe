@@ -7,6 +7,10 @@ const oScoreText = document.querySelector("#o-score-text");
 const xScoreElement = document.querySelector("#x-score");
 const oScoreElement = document.querySelector("#o-score");
 const turnInfoImage = document.querySelector(".turn-box img");
+const modal = document.querySelector("#modal");
+const modalInfoText = document.querySelector(".result-info-text");
+const modalIcon = document.querySelector(".modal-box img");
+const modalResultText = document.querySelector(".result-text");
 
 let player1 = "x";
 let mode = "cpu";
@@ -37,6 +41,12 @@ const activateChoice = (icon) => {
   }
 };
 
+const checkXwin = () => {
+  return winnerCombinations.find((combination) =>
+    combination.every((button) => xArray.includes(button))
+  );
+};
+
 const onHoverEffect = () => {
   for (let index = 0; index < freeButtons.length; index++) {
     const playButtonIndex = freeButtons[index];
@@ -64,11 +74,17 @@ const createClickedFunctions = () => {
       if (turn === "x") {
         icon.src = "./photos/x.svg";
         event.target.append(icon);
+        xArray.push(index);
+        const win = checkXwin();
+        if (win) {
+          return;
+        }
         turn = "o";
         turnInfoImage.src = "./photos/o-gray.svg";
       } else {
         icon.src = "./photos/o.svg";
         event.target.append(icon);
+        oArray.push(index);
         turn = "x";
         turnInfoImage.src = "./photos/x-gray.png";
       }
