@@ -49,6 +49,8 @@ const checkXwin = () => {
 
 const onWinX = () => {
   modal.style.display = "flex";
+  modalIcon.src = "./photos/x.svg";
+  modalResultText.style.color = "#31C3BD";
   if (player1 === "x") {
     modalInfoText.textContent = "YOU WON!";
   } else {
