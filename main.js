@@ -45,10 +45,38 @@ const onHoverEffect = () => {
   }
 };
 
+const createClickedFunctions = () => {
+  for (let index = 0; index < playButtons.length; index++) {
+    playButtons[index].onclick = (event) => {
+      event.target.classList.remove("xHover");
+      event.target.classList.remove("oHover");
+
+      const spliceIndex = freeButtons.indexOf(index);
+      freeButtons.splice(spliceIndex, 1);
+
+      const icon = document.createElement("img");
+      icon.classList.add("play-icon");
+      if (turn === "x") {
+        icon.src = "./photos/x.svg";
+        event.target.append(icon);
+        turn = "o";
+      } else {
+        icon.src = "./photos/o.svg";
+        event.target.append(icon);
+        turn = "x";
+      }
+      onHoverEffect();
+
+      event.target.onclick = null;
+    };
+  }
+};
+
 const startGame = (modeParam) => {
   home.style.display = "none";
   board.style.display = "flex";
   document.body.style.alignItems = "flex-start";
   mode = modeParam;
   onHoverEffect();
+  createClickedFunctions();
 };
