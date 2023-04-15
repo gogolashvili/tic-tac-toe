@@ -219,13 +219,13 @@ body {
 }
 
 .xHover:hover {
-  background-image: url("./photos/hoverX.jpg");
+  background-image: url("./photos/hoverX.svg");
   background-repeat: no-repeat;
   background-size: 40px 40px;
   background-position: center;
 }
 .oHover:hover {
-  background-image: url("./photos/hoverO.jpg");
+  background-image: url("./photos/hoverO.svg");
   background-repeat: no-repeat;
   background-size: 40px 40px;
   background-position: center;
