@@ -268,11 +268,11 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-top: 16px;
 }
 .modal-box div img {
   width: 30px;
   height: 30px;
-  margin-top: 16px;
 }
 .result-text {
   font-weight: 700;
@@ -281,6 +281,7 @@ body {
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--sky);
+  white-space: nowrap;
 }
 .result-buttons {
   display: flex;
@@ -294,6 +295,12 @@ body {
   border-radius: 10px;
   border: none;
   cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20.16px;
+  letter-spacing: 1px;
+  color: var(--darkBg);
+  text-transform: uppercase;
 }
 
 .quit-btn {
