@@ -65,10 +65,12 @@ const createClickedFunctions = () => {
         icon.src = "./photos/x.svg";
         event.target.append(icon);
         turn = "o";
+        turnInfoImage.src = "./photos/o-gray.svg";
       } else {
         icon.src = "./photos/o.svg";
         event.target.append(icon);
         turn = "x";
+        turnInfoImage.src = "./photos/x-gray.png";
       }
       onHoverEffect();
 
