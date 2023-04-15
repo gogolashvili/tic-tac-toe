@@ -241,5 +241,13 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: var(--darkBg);
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.modal-box {
+  width: 100%;
+  padding: 40px 48px 48px 48px;
 }
