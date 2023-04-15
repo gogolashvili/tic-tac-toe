@@ -285,7 +285,7 @@ body {
 .result-buttons {
   display: flex;
   align-items: center;
-  /* margin-top: 24px; */
+  margin-top: 24px;
   gap: 16px;
 }
 .quit-btn,
