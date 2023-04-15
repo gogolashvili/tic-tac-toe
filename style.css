@@ -250,4 +250,26 @@ body {
 .modal-box {
   width: 100%;
   padding: 40px 48px 48px 48px;
+  background-color: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.result-info-text {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--light);
+  line-height: 17.64px;
+  letter-spacing: 0.88px;
+  text-transform: uppercase;
+}
+.modal-box div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.modal-box div img {
+  width: 30px;
+  height: 30px;
 }
