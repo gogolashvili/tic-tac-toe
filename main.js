@@ -116,6 +116,9 @@ const onHoverEffect = () => {
 
 const createClickedFunctions = () => {
   for (let index = 0; index < playButtons.length; index++) {
+    playButtons[index].style.background = "#1f3641";
+    playButtons[index].innerHTML = "";
+
     playButtons[index].onclick = (event) => {
       event.target.classList.remove("xHover");
       event.target.classList.remove("oHover");
@@ -190,6 +193,7 @@ const reset = () => {
   freeButtons = [0, 1, 2, 3, 4, 5, 6, 7, 8];
   xArray = [];
   oArray = [];
+  modal.style.display = "none";
 };
 
 const quit = () => {
@@ -200,7 +204,6 @@ const quit = () => {
   board.style.display = "none";
   home.style.display = "flex";
   home.style.marginTop = "80px";
-  modal.style.display = "none";
   oScoreElement.textContent = 0;
   xScoreElement.textContent = 0;
   tieScoreElement.textContent = 0;
@@ -208,5 +211,5 @@ const quit = () => {
 
 const nextRound = () => {
   reset();
-  modal.style.display = "none";
+  startGame(mode);
 };
