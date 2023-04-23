@@ -87,6 +87,16 @@ const winninStyle = (array) => {
     playButtons[array[0]].style.background = "#31c3bd";
     playButtons[array[1]].style.background = "#31c3bd";
     playButtons[array[2]].style.background = "#31c3bd";
+    playButtons[array[0]].firstElementChild.src = "./photos/x-win.svg";
+    playButtons[array[1]].firstElementChild.src = "./photos/x-win.svg";
+    playButtons[array[2]].firstElementChild.src = "./photos/x-win.svg";
+  } else {
+    playButtons[array[0]].style.background = "#f2b137";
+    playButtons[array[1]].style.background = "#f2b137";
+    playButtons[array[2]].style.background = "#f2b137";
+    playButtons[array[0]].firstElementChild.src = "./photos/o-win.svg";
+    playButtons[array[1]].firstElementChild.src = "./photos/o-win.svg";
+    playButtons[array[2]].firstElementChild.src = "./photos/o-win.svg";
   }
 };
 
@@ -133,6 +143,7 @@ const createClickedFunctions = () => {
         const win = checkOwin();
         if (win) {
           onWinO();
+          winninStyle(win);
           return;
         }
         turn = "x";
