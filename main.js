@@ -175,7 +175,6 @@ const startGame = (modeParam) => {
   document.body.style.alignItems = "flex-start";
   mode = modeParam;
   onHoverEffect();
-  onHoverEffect();
 
   createClickedFunctions();
   if (modeParam === "player") {
