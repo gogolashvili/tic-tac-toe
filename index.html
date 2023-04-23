@@ -17,8 +17,10 @@
           <p class="result-text">TAKES THE ROUND</p>
         </div>
         <div class="result-button">
-          <button class="quit-btn">quit</button>
-          <button class="next-round-btn">next round</button>
+          <button class="quit-btn" onclick="quit()">quit</button>
+          <button class="next-round-btn" onclick="nextRound()">
+            next round
+          </button>
         </div>
       </div>
     </div>
@@ -106,7 +108,7 @@
         </div>
         <div class="statistic-box">
           <h3>TIES</h3>
-          <span>0</span>
+          <span id="tie-score">0</span>
         </div>
         <div class="statistic-box">
           <h3 id="o-score-text">O (CPU)</h3>

@@ -6,6 +6,7 @@ const xScoreText = document.querySelector("#x-score-text");
 const oScoreText = document.querySelector("#o-score-text");
 const xScoreElement = document.querySelector("#x-score");
 const oScoreElement = document.querySelector("#o-score");
+const tieScoreElement = document.querySelector("#tie-score");
 const turnInfoImage = document.querySelector(".turn-box img");
 const modal = document.querySelector("#modal");
 const modalInfoText = document.querySelector(".result-info-text");
@@ -180,4 +181,32 @@ const startGame = (modeParam) => {
       oScoreText.textContent = "O (YOU)";
     }
   }
+};
+
+const reset = () => {
+  player1 = "x";
+  mode = "cpu";
+  turn = "x";
+  freeButtons = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+  xArray = [];
+  oArray = [];
+};
+
+const quit = () => {
+  reset();
+  xScore = 0;
+  oScore = 0;
+  tieScore = 0;
+  board.style.display = "none";
+  home.style.display = "flex";
+  home.style.marginTop = "80px";
+  modal.style.display = "none";
+  oScoreElement.textContent = 0;
+  xScoreElement.textContent = 0;
+  tieScoreElement.textContent = 0;
+};
+
+const nextRound = () => {
+  reset();
+  modal.style.display = "none";
 };
