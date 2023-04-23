@@ -236,7 +236,8 @@ body {
   height: 40px;
 }
 #modal,
-#modal-tie {
+#modal-tie,
+#modal-restart {
   width: 100vw;
   height: 100vh;
   display: none;
@@ -246,9 +247,11 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
+  opacity: 0.9;
+  justify-content: center;
 }
 .modal-box {
-  width: 100%;
+  width: 90%;
   padding: 40px 48px 48px 48px;
   background-color: var(--bg);
   display: flex;
@@ -256,6 +259,7 @@ body {
   justify-content: center;
   align-items: center;
   opacity: 0.9;
+  border-radius: 20px;
 }
 .result-info-text {
   font-weight: 700;
