@@ -82,6 +82,14 @@ const onWinO = () => {
   }
 };
 
+const winninStyle = (array) => {
+  if (turn === "x") {
+    playButtons[array[0]].style.background = "#31c3bd";
+    playButtons[array[1]].style.background = "#31c3bd";
+    playButtons[array[2]].style.background = "#31c3bd";
+  }
+};
+
 const onHoverEffect = () => {
   for (let index = 0; index < freeButtons.length; index++) {
     const playButtonIndex = freeButtons[index];
@@ -113,6 +121,7 @@ const createClickedFunctions = () => {
         const win = checkXwin();
         if (win) {
           onWinX();
+          winninStyle(win);
           return;
         }
         turn = "o";
