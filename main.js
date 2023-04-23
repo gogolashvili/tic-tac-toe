@@ -11,6 +11,7 @@ const turnInfoImage = document.querySelector(".turn-box img");
 const modal = document.querySelector("#modal");
 const modalTie = document.querySelector("#modal-tie");
 const modalRestart = document.querySelector("#modal-restart");
+const modalSoon = document.querySelector("#modal-soon");
 const modalInfoText = document.querySelector(".result-info-text");
 const modalIcon = document.querySelector(".modal-box img");
 const modalResultText = document.querySelector(".result-text");
@@ -170,6 +171,7 @@ const createClickedFunctions = () => {
 const startGame = (modeParam) => {
   home.style.display = "none";
   board.style.display = "flex";
+  modalSoon.style.display = "none";
   document.body.style.alignItems = "flex-start";
   mode = modeParam;
   onHoverEffect();
@@ -240,4 +242,7 @@ const restartFc = () => {
   reset();
   startGame(mode);
   modalRestart.style.display = "none";
+};
+const soon = () => {
+  modalSoon.style.display = "flex";
 };
