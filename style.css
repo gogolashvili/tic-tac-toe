@@ -235,7 +235,8 @@ body {
   width: 40px;
   height: 40px;
 }
-#modal {
+#modal,
+#modal-tie {
   width: 100vw;
   height: 100vh;
   display: none;
