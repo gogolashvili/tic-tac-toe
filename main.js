@@ -140,6 +140,11 @@ const createClickedFunctions = () => {
           winninStyle(win);
           return;
         }
+        if (xArray.length === 5) {
+          modalTie.style.display = "flex";
+          tieScore++;
+          tieScoreElement.textContent = tieScore;
+        }
         turn = "o";
         turnInfoImage.src = "./photos/o-gray.svg";
       } else {
@@ -196,6 +201,7 @@ const reset = () => {
   xArray = [];
   oArray = [];
   modal.style.display = "none";
+  modalTie.style.display = "none";
 };
 
 const quit = () => {
@@ -218,4 +224,20 @@ const nextRound = () => {
 
 const openRestartModal = () => {
   modalRestart.style.display = "flex";
+};
+
+const closeModal = () => {
+  modalRestart.style.display = "none";
+};
+
+const restartFc = () => {
+  xScore = 0;
+  oScore = 0;
+  tieScore = 0;
+  oScoreElement.textContent = 0;
+  xScoreElement.textContent = 0;
+  tieScoreElement.textContent = 0;
+  reset();
+  startGame(mode);
+  modalRestart.style.display = "none";
 };
