@@ -205,6 +205,7 @@ const reset = () => {
   oArray = [];
   modal.style.display = "none";
   modalTie.style.display = "none";
+  onHoverEffect();
 };
 
 const quit = () => {
